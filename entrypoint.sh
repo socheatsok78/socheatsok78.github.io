@@ -4,6 +4,8 @@ main () {
     local REPOSITORY=$1
     local PAGES_ACCESS_TOKEN=$2
 
+    echo -e "Trigger pages build on ${REPOSITORY}\n"
+
     curl \
         -X POST \
             -H "Authorization: token ${PAGES_ACCESS_TOKEN}" \
