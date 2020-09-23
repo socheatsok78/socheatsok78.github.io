@@ -1,0 +1,16 @@
+name: GitHub Box
+
+on:
+  schedule:
+    - cron: "0 * * * *"
+  push:
+    branches: master
+
+jobs:
+  update-gist:
+    runs-on: macos-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build GitHub personal website
+        uses: socheatsok78/socheatsok78.github.io@master
